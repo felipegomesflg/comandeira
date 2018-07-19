@@ -1,0 +1,17 @@
+
+
+<ion-content padding>
+  <h3>
+    <img src="assets/imgs/logo.png">
+  </h3>
+  <h1>MDC Comandeira WEB</h1>
+  <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Funcionário</ion-label>
+        <ion-input type="text" [(ngModel)]="objAuth.idcode"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+    <button ion-button block (click)="autenticar()">Entrar</button>
+</ion-content>

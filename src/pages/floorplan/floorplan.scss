@@ -1,0 +1,37 @@
+page-floorplan {
+    .mapa-mesa {
+        width: calc(100% + 28px);
+        margin: 10px -14px;
+    
+            > ion-col {
+                &.totalizado {
+                    background-color: #f6a821;
+                }
+    
+                &.aberto {
+                    background-color: #1bbf89;
+                }
+    
+                color: #FFF;
+                padding: 20px;
+                border: 1px solid #2d3038;
+                p,h2 {
+                    margin:0 !important;
+                    text-align: center;
+                }
+            }
+            
+    }
+
+    #hidden-button{
+        height: 100%;
+        width: 100%;
+        box-shadow: none;
+        background: transparent;
+        position: absolute;
+        -webkit-box-shadow: none;
+        margin: -20px;
+    }
+
+}
+

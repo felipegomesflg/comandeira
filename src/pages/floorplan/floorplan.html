@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title><img src="assets/imgs/logo.png"></ion-title>
+      <ion-buttons end>
+          <button ion-button >
+              <ion-icon name="refresh"></ion-icon>
+            </button>
+        </ion-buttons>
+      <ion-buttons end>
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+    <div class="view-header">
+        <ion-row>
+            <ion-col col-3 class="header-icon">
+                <ion-icon name="apps"></ion-icon>
+            </ion-col>
+            <ion-col col-9>
+                <h3>Mapa de Mesas</h3>
+                <small>
+                    <ul class="legend"><li class="aberto"><span></span>Mesas Abertas</li><li class="totalizado"><span></span>Mesas em totalização</li></ul>
+                </small>
+              </ion-col>
+        </ion-row>
+        <hr>
+        <ion-row class="mapa-mesa">
+            
+            <ion-col  *ngFor="let t of floorPlan" [ngClass]="{'aberto':t.status=='A','totalizado':t.status=='T'}" col-6>
+                <button id='hidden-button' ion-button ></button>
+                <div class="content">
+                    <h2>{{t.table_number}}</h2>
+                    <p>R$ {{t.subtotal}}</p>
+                    <p>{{t.pax_count}} Pessoas</p>
+                    <p>{{t.last_order_ts}} Minutos</p>
+                </div>
+            </ion-col>
+          </ion-row>
+        
+    </div>
+    <ion-fab right bottom>
+        <button ion-fab mini (click)="addMesa()"><ion-icon name="add"></ion-icon></button>
+      </ion-fab>
+</ion-content>

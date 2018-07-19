@@ -1,3 +1,13 @@
+<div id="spinner" *ngIf="this.comumService.loading!=''">
+  <h5 id="msg-spinner" class="text-center blink-me" >{{this.comumService.loading}}</h5>
+  <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+  </div>
+</div>
+
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
@@ -6,10 +16,24 @@
   </ion-header>
 
   <ion-content>
+    
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <button menuClose ion-item icon-start>
+        <ion-icon name="print"></ion-icon> Testar Impressoras
       </button>
+      <button menuClose ion-item icon-start>
+          <ion-icon name="pie"></ion-icon> Estatisticas
+      </button>
+      <button menuClose ion-item icon-start>
+        <ion-icon name="information-circle"></ion-icon> Sobre
+      </button>
+      <button menuClose ion-item icon-start>
+        <ion-icon name="desktop"></ion-icon> Trocar Maquina
+      </button>
+      <button menuClose ion-item icon-start>
+        <ion-icon name="exit"></ion-icon> Sair
+      </button>
+    
     </ion-list>
   </ion-content>
 

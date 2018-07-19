@@ -1,0 +1,48 @@
+$toolbar-background:#1f4981;
+$toolbar-ios-height:60px;
+$headings-line-height:2em;
+$background-color:#2d3038;
+$list-background-color:transparent;
+$label-md-text-color:#FFF;
+
+.view-header{
+    padding:0 !important;
+
+}
+page-standby,page-home  {
+    .content-md{
+        background: url('../assets/imgs/bg-login.jpg');
+        background-size:cover;
+        background-position: 50% 50%;
+        .scroll-content{
+            background-color:rgba(0,0,0,0.4);
+        }
+    }
+    h3{
+        text-align: center;
+        padding-top:50px;
+        img{
+            background-color: #1f4981;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+    }
+    h1{
+        text-align: center;
+        margin-bottom:30px;
+    }
+    .item-md{
+        font-size: 2.5rem;
+
+    }
+    .label-md[stacked]{
+        font-size: 1.5rem;
+    }
+}
+
+ion-menu{
+    ion-label{
+        line-height: 2em;
+    }
+}
